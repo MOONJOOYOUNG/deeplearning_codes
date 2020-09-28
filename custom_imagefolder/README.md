@@ -2,6 +2,7 @@
 * torchvision.datasets.imagefolder
 
 ``` 
+# Test
 test_dataset = imagefolder.ImageFolder('./test', transform=test_transform)
 train_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=4)
 print(len(test_dataset.samples), len(test_dataset.targets))
