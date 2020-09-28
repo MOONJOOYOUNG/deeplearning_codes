@@ -4,6 +4,10 @@
 ### move_image_xml.py
 * ./train/...xml & ...jpg -> xml & image files 
 * Move xml & image -> ./dataset/train/annotation/...xml , ./dataset/train/image/...jpg
+``` 
+python move_image_xml.py --path ./dataset/train
+``` 
+
 ### make_names.py
 * data.names -> .dataset/train/data.names
 ``` 
