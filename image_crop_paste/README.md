@@ -6,3 +6,4 @@
 python cam_crop --xml ./annot --origin origin_image --cam cam_image --save ./save/
 ``` 
 
+![example](./example.png)
