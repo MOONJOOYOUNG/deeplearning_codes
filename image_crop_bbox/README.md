@@ -6,5 +6,5 @@
 
 ## main.py
 ``` 
-# python main --annotation_path ./annotation --image_path ./images --save_path ./save
+# python main.py --annotation_path ./annotation --image_path ./images --save_path ./save
 ``` 
