@@ -1,4 +1,8 @@
 # Make object detection datasets
+* 오브젝트 디텍션 데이터셋 제작.
+* 이미지와 xml(좌표)파일이 각각 잇을때 밑의 코드 순서대로 진행.
+* 같은 폴더에 있다면 서로 경로는 분리시키고 -> class 명만 추출해 data.name파일 제작.
+* 이미지의 파일 명을 txt로 만든 후 -> voc 파일로 다시 만들어줌 ex) 이미지경로 좌표 클래스명
 ## Image & xml converter
 
 ### move_image_xml.py
