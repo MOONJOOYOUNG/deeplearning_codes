@@ -1,5 +1,7 @@
 # Pytorch Custom datasets
-* torchvision.datasets.imagefolder
+* torchvision.datasets.imagefolder을 이용한 customdata set생성
+* 기존 데이터셋에서 데이터를 지우는 기능 추가 -> 원본 파일명을 조건으로 삭제 가능
+* 기존 로더의 return 값에서 데이터의 index와 filename을 추가로 받아오게 수정
 
 ``` 
 # Test
