@@ -1,4 +1,4 @@
-## AN EMPIRICAL STUDY OF EXAMPLE FORGETTING DURING DEEP NEURAL NETWORK LEARNING
+## An Empirical Study of Example Forgetting during Deep Neural Network Learning
 - Paper : https://arxiv.org/abs/1812.05159
 
 ## 논문 구현
