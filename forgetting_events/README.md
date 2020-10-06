@@ -17,3 +17,5 @@
 # python main.py --save_path ./forgettable/5/ --remove remove --mode forgettable --remove_ratio 5 --sort reverse --gpu_id 6
 
 ``` 
+
+![example](./forgetting_events.jpg)
