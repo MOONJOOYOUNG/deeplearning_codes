@@ -18,7 +18,7 @@ parser.add_argument('--batch_size', default= 256, type=int, help='Batch size')
 parser.add_argument('--epochs', default= 150, type=int, help='Total number of epochs to run')
 parser.add_argument('--model', default='res', type=str, help='Models name to use [res, dense, vgg]')
 parser.add_argument('--save_path', default='./remove_test/', type=str, help='Savefiles directory')
-parser.add_argument('--gpu', default='7', type=str, help='GPU id to use')
+parser.add_argument('--gpu_id', default='7', type=str, help='GPU id to use')
 parser.add_argument('--print-freq', '-p', default=10, type=int, metavar='N', help='print frequency (default: 10)')
 parser.add_argument('--remove', default='remove', type=str, help='Mode = [remove]')
 parser.add_argument('--mode', default='forgettable', type=str, help='Mode = [forgettable, inforgettable]')
@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 def main():
     # set GPU ID
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_id
     cudnn.benchmark = True
 
     # check save path
