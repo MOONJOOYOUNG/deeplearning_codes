@@ -113,9 +113,14 @@ class DatasetFolder(VisionDataset):
         self.targets = [s[1] for s in samples]
 
     def remove_data(self, filename):
-        idx = np.where(self.file_names == filename)[0]
-        self.targets = np.delete(self.targets, idx)
-        self.samples = np.delete(self.samples, idx)
+        idx_list = []
+        for i in filename:
+            idx = np.where(self.file_names == i)[0]
+            idx_list.extend(idx)
+
+        idx_list = np.array(idx_list)
+        self.targets = np.delete(self.targets, idx_list)
+        self.samples = np.delete(self.samples, idx_list)
 
 
     def _find_classes(self, dir):

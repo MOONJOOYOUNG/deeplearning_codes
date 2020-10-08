@@ -42,8 +42,7 @@ def get_loader(args):
 
         remove_ratio = int((len(examples) / 100 * args.remove_ratio))
         print("Remove count : {0}".format(remove_ratio))
-        for i in filename[:remove_ratio]:
-            train_dataset.remove_data(i)
+        train_dataset.remove_data(filename[:remove_ratio])
         print("Remove Dataset : {0}".format(len(train_loader.dataset)))
 
     print("-------------------Make loader-------------------")
