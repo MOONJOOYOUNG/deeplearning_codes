@@ -1,4 +1,4 @@
-# Pytorch Classification
+# Pytorch Multiclass Classification
 
 ## main.py
 ``` 
