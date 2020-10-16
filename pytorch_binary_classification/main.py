@@ -16,7 +16,6 @@ from torch.optim.lr_scheduler import MultiStepLR
 parser = argparse.ArgumentParser(description='Confidence Aware Learning')
 parser.add_argument('--batch_size', default= 256, type=int, help='Batch size')
 parser.add_argument('--epochs', default= 150, type=int, help='Total number of epochs to run')
-parser.add_argument('--model', default='res', type=str, help='Models name to use [res, dense, vgg]')
 parser.add_argument('--save_path', default='./test/', type=str, help='Savefiles directory')
 parser.add_argument('--gpu_id', default='6', type=str, help='GPU id to use')
 parser.add_argument('--print-freq', '-p', default=50, type=int, metavar='N', help='print frequency (default: 10)')
@@ -36,8 +35,7 @@ def main():
     train_loader, test_loader = dataset.get_loader(args)
 
     # set model
-    if args.model == 'res':
-        model = mlp.Network().cuda()
+    model = mlp.Network().cuda()
 
     # set criterion
     criterion = nn.BCEWithLogitsLoss().cuda()
