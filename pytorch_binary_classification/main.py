@@ -94,7 +94,8 @@ def train(train_loader, model, criterion, optimizer, epoch, logger):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
+        
+        output = torch.sigmoid(output)
         prediction = output >= torch.FloatTensor([0.5]).cuda()
         correct = prediction.float() == target
         accuracy = correct.sum().item() / len(correct)
@@ -134,7 +135,8 @@ def validate(val_loader, model, criterion, epoch, logger, mode):
             output = model(input)
             target = target.view(-1, 1)
             loss = criterion(output, target)
-
+            
+            output = torch.sigmoid(output)
             prediction = output >= torch.FloatTensor([0.5]).cuda()
             correct = prediction.float() == target
             accuracy = correct.sum().item() / len(correct)
